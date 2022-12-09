@@ -23,10 +23,25 @@ for line in lines:
 
 print(totCalElfs)
 
-maxCal = 0
+number1Elf = 0
 
 for calories in totCalElfs:
-    if calories > maxCal:
-        maxCal = calories
+    if calories > number1Elf:
+        number1Elf = calories
 
-print(maxCal)
+
+number2Elf = 0
+
+for calories in totCalElfs:
+    if calories > number2Elf and calories != number1Elf:
+        number2Elf = calories
+
+number3Elf = 0
+
+for calories in totCalElfs:
+    if calories > number3Elf and calories != number1Elf and calories != number2Elf:
+        number3Elf = calories
+
+top3Tot = number1Elf + number2Elf + number3Elf
+
+print(top3Tot)
